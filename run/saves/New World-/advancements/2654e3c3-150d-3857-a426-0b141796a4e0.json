@@ -1,0 +1,105 @@
+{
+  "minecraft:recipes/tools/fishing_rod": {
+    "criteria": {
+      "has_string": "2022-12-22 16:07:53 -0500"
+    },
+    "done": true
+  },
+  "allfiction:theperfectpresident": {
+    "criteria": {
+      "theperfectpresident": "2022-12-22 16:06:23 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/bow": {
+    "criteria": {
+      "has_string": "2022-12-22 16:07:53 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/string_to_wool": {
+    "criteria": {
+      "has_string": "2022-12-22 16:07:53 -0500"
+    },
+    "done": true
+  },
+  "allfiction:awakened": {
+    "criteria": {
+      "awakened": "2022-12-22 16:07:47 -0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/kill_a_mob": {
+    "criteria": {
+      "zombie": "2022-12-22 16:07:51 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/mushroom_stew": {
+    "criteria": {
+      "has_bowl": "2022-12-22 16:06:23 -0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/kill_all_mobs": {
+    "criteria": {
+      "zombie": "2022-12-22 16:07:51 -0500",
+      "spider": "2022-12-22 16:07:52 -0500"
+    },
+    "done": false
+  },
+  "allfiction:devilstyle": {
+    "criteria": {
+      "devilstyle": "2022-12-22 16:06:23 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/end_crystal": {
+    "criteria": {
+      "has_ender_eye": "2022-12-22 16:06:23 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/red_dye_from_poppy": {
+    "criteria": {
+      "has_red_flower": "2022-12-22 16:06:23 -0500"
+    },
+    "done": true
+  },
+  "allfiction:parastieseeing": {
+    "criteria": {
+      "parastieseeing": "2022-12-22 16:06:23 -0500"
+    },
+    "done": true
+  },
+  "allfiction:president2": {
+    "criteria": {
+      "president2": "2022-12-22 16:06:23 -0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2022-12-22 16:07:51 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/ender_chest": {
+    "criteria": {
+      "has_ender_eye": "2022-12-22 16:06:23 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/tripwire_hook": {
+    "criteria": {
+      "has_string": "2022-12-22 16:07:53 -0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "taiga_hills": "2022-12-22 16:06:23 -0500"
+    },
+    "done": false
+  }
+}

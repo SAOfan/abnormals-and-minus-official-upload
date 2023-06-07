@@ -1,0 +1,27 @@
+{
+  "group": "allfiction",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    " 4 ",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "allfiction:steel"
+    },
+    "2": {
+      "item": "allfiction:steel"
+    },
+    "4": {
+      "item": "allfiction:steelbeam"
+    },
+    "7": {
+      "item": "allfiction:steelbeam"
+    }
+  },
+  "result": {
+    "item": "allfiction:slottedpanheadscrew",
+    "count": 1
+  }
+}

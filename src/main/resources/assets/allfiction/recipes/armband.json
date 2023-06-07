@@ -1,0 +1,51 @@
+{
+  "group": "allfiction",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:wool",
+      "data": 14
+    },
+    "1": {
+      "item": "minecraft:wool",
+      "data": 14
+    },
+    "2": {
+      "item": "minecraft:wool",
+      "data": 14
+    },
+    "3": {
+      "item": "minecraft:wool",
+      "data": 0
+    },
+    "4": {
+      "item": "minecraft:wool",
+      "data": 15
+    },
+    "5": {
+      "item": "minecraft:wool",
+      "data": 0
+    },
+    "6": {
+      "item": "minecraft:wool",
+      "data": 14
+    },
+    "7": {
+      "item": "minecraft:wool",
+      "data": 14
+    },
+    "8": {
+      "item": "minecraft:wool",
+      "data": 14
+    }
+  },
+  "result": {
+    "item": "allfiction:ninetyninethpresidentband",
+    "count": 1
+  }
+}

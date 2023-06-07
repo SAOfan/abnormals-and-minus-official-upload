@@ -1,0 +1,62 @@
+{
+  "allfiction:theperfectpresident": {
+    "criteria": {
+      "theperfectpresident": "2022-11-29 16:30:19 -0500"
+    },
+    "done": true
+  },
+  "allfiction:theloservicepresident": {
+    "criteria": {
+      "theloservicepresident": "2022-11-29 16:30:19 -0500"
+    },
+    "done": true
+  },
+  "allfiction:hybridgodmode": {
+    "criteria": {
+      "hybridgodmode": "2022-11-29 16:31:20 -0500"
+    },
+    "done": true
+  },
+  "allfiction:wargod": {
+    "criteria": {
+      "wargod": "2022-11-29 16:30:19 -0500"
+    },
+    "done": true
+  },
+  "allfiction:alteredgodmode": {
+    "criteria": {
+      "alteredgodmode": "2022-11-29 16:31:05 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/ender_chest": {
+    "criteria": {
+      "has_ender_eye": "2022-11-29 16:30:19 -0500"
+    },
+    "done": true
+  },
+  "allfiction:theendgod": {
+    "criteria": {
+      "theendgod": "2022-11-29 16:31:30 -0500"
+    },
+    "done": true
+  },
+  "allfiction:forsakengodmode": {
+    "criteria": {
+      "forsakengodmode": "2022-11-29 16:31:15 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/end_crystal": {
+    "criteria": {
+      "has_ender_eye": "2022-11-29 16:30:19 -0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "forest": "2022-11-29 16:30:19 -0500"
+    },
+    "done": false
+  }
+}

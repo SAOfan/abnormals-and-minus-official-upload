@@ -1,0 +1,38 @@
+{
+  "_fv": 6,
+  "_type": "gun",
+  "definition": {
+    "renderType": 0,
+    "texture": "philips_screw",
+    "customModelName": "Normal",
+    "name": "Philipsscrew",
+    "creativeTab": {
+      "value": "COMBAT"
+    },
+    "stackSize": 64,
+    "ammoItem": {
+      "value": ""
+    },
+    "shootConstantly": false,
+    "usageCount": 100,
+    "actionSound": {
+      "value": "block.anvil.hit"
+    },
+    "hasGlow": true,
+    "enableMeleeDamage": true,
+    "damageVsEntity": 6.0,
+    "bulletPower": 2.0,
+    "bulletDamage": 6.0,
+    "bulletKnockback": 5,
+    "bulletParticles": true,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": "Blocks.TRIPWIRE_HOOK"
+    },
+    "bulletModel": "Default",
+    "customBulletModelTexture": "",
+    "onBulletHitsEntity": {
+      "name": "PhilipsscrewblockBulletHitsPlayer"
+    }
+  }
+}

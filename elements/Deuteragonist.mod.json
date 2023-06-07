@@ -1,0 +1,23 @@
+{
+  "_fv": 6,
+  "_type": "potion",
+  "definition": {
+    "name": "Deuteragonist",
+    "effectName": "Deuteragonist",
+    "icon": "padoru.png",
+    "color": {
+      "value": -16777012,
+      "falpha": 0.0
+    },
+    "isInstant": true,
+    "isBad": false,
+    "isBenefitical": true,
+    "registerPotionType": true,
+    "curativeItems": [],
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "DeuteragonistPotionStartedapplied"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:obsidian"
+    },
+    "title": {
+      "translate": "advancements.theendgod.title"
+    },
+    "description": {
+      "translate": "advancements.theendgod.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "theendgod": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "allfiction:hybridgodmode"
+}

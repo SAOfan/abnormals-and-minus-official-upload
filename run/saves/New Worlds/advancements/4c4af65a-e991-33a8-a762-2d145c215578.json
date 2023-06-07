@@ -1,0 +1,86 @@
+{
+  "allfiction:theperfectpresident": {
+    "criteria": {
+      "theperfectpresident": "2023-01-09 16:46:20 -0500"
+    },
+    "done": true
+  },
+  "allfiction:theloservicepresident": {
+    "criteria": {
+      "theloservicepresident": "2023-01-09 16:46:20 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/tnt": {
+    "criteria": {
+      "has_gunpowder": "2023-01-09 16:47:25 -0500"
+    },
+    "done": true
+  },
+  "allfiction:awakened": {
+    "criteria": {
+      "awakened": "2023-01-09 16:46:36 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/mushroom_stew": {
+    "criteria": {
+      "has_bowl": "2023-01-09 16:46:20 -0500"
+    },
+    "done": true
+  },
+  "allfiction:devilstyle": {
+    "criteria": {
+      "devilstyle": "2023-01-09 16:46:20 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/end_crystal": {
+    "criteria": {
+      "has_ender_eye": "2023-01-09 16:46:20 -0500"
+    },
+    "done": true
+  },
+  "allfiction:contradictoryconjunction": {
+    "criteria": {
+      "contradictoryconjunction": "2023-01-09 16:46:38 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/bookshelf": {
+    "criteria": {
+      "has_book": "2023-01-09 16:46:20 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/writable_book": {
+    "criteria": {
+      "has_book": "2023-01-09 16:46:20 -0500"
+    },
+    "done": true
+  },
+  "allfiction:parastieseeing": {
+    "criteria": {
+      "parastieseeing": "2023-01-09 16:46:20 -0500"
+    },
+    "done": true
+  },
+  "allfiction:president2": {
+    "criteria": {
+      "president2": "2023-01-09 16:46:20 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/ender_chest": {
+    "criteria": {
+      "has_ender_eye": "2023-01-09 16:46:20 -0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "plains": "2023-01-09 16:46:20 -0500"
+    },
+    "done": false
+  }
+}

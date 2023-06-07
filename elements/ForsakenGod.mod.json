@@ -1,0 +1,23 @@
+{
+  "_fv": 6,
+  "_type": "potion",
+  "definition": {
+    "name": "Forsaken God",
+    "effectName": "Forsaken God",
+    "icon": "392-3926346_minecraft-book-item-hd-png-download.png",
+    "color": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "isInstant": true,
+    "isBad": false,
+    "isBenefitical": false,
+    "registerPotionType": true,
+    "curativeItems": [],
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onActiveTick": {
+      "name": "ForsakenGodPotionStartedapplied"
+    }
+  }
+}

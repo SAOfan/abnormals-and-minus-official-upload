@@ -1,0 +1,50 @@
+{
+  "minecraft:recipes/brewing/fermented_spider_eye": {
+    "criteria": {
+      "has_spider_eye": "2022-12-21 22:05:07 -0500"
+    },
+    "done": true
+  },
+  "allfiction:theperfectpresident": {
+    "criteria": {
+      "theperfectpresident": "2022-12-21 22:04:55 -0500"
+    },
+    "done": true
+  },
+  "allfiction:parastieseeing": {
+    "criteria": {
+      "parastieseeing": "2022-12-21 22:06:17 -0500"
+    },
+    "done": true
+  },
+  "allfiction:president2": {
+    "criteria": {
+      "president2": "2022-12-21 22:04:56 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/ender_chest": {
+    "criteria": {
+      "has_ender_eye": "2022-12-21 22:05:32 -0500"
+    },
+    "done": true
+  },
+  "allfiction:awakened": {
+    "criteria": {
+      "awakened": "2022-12-21 22:05:36 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/end_crystal": {
+    "criteria": {
+      "has_ender_eye": "2022-12-21 22:05:32 -0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "taiga_hills": "2022-12-21 22:04:56 -0500"
+    },
+    "done": false
+  }
+}

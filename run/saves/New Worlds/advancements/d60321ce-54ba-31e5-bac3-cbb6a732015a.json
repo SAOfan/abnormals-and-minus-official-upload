@@ -1,0 +1,172 @@
+{
+  "allfiction:theperfectpresident": {
+    "criteria": {
+      "theperfectpresident": "2022-12-22 17:13:10 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/item_frame": {
+    "criteria": {
+      "has_leather": "2022-12-22 17:17:01 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/leather_chestplate": {
+    "criteria": {
+      "has_leather": "2022-12-22 17:17:01 -0500"
+    },
+    "done": true
+  },
+  "allfiction:euteragonist": {
+    "criteria": {
+      "euteragonist": "2022-12-22 17:14:15 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/dark_oak_boat": {
+    "criteria": {
+      "entered_water": "2022-12-22 17:11:49 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/mushroom_stew": {
+    "criteria": {
+      "has_bowl": "2022-12-22 17:15:25 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/end_crystal": {
+    "criteria": {
+      "has_ender_eye": "2022-12-22 17:13:26 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/bookshelf": {
+    "criteria": {
+      "has_book": "2022-12-22 17:18:33 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/writable_book": {
+    "criteria": {
+      "has_book": "2022-12-22 17:18:33 -0500"
+    },
+    "done": true
+  },
+  "allfiction:parastieseeing": {
+    "criteria": {
+      "parastieseeing": "2022-12-22 17:13:26 -0500"
+    },
+    "done": true
+  },
+  "allfiction:president2": {
+    "criteria": {
+      "president2": "2022-12-22 17:16:21 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/ender_chest": {
+    "criteria": {
+      "has_ender_eye": "2022-12-22 17:13:26 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/leather_helmet": {
+    "criteria": {
+      "has_leather": "2022-12-22 17:17:01 -0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "birch_forest": "2022-12-22 17:17:34 -0500",
+      "plains": "2022-12-22 17:11:40 -0500",
+      "river": "2022-12-22 17:16:41 -0500"
+    },
+    "done": false
+  },
+  "allfiction:protagnst": {
+    "criteria": {
+      "protagnst": "2022-12-22 17:14:23 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/book": {
+    "criteria": {
+      "has_paper": "2022-12-22 17:18:29 -0500"
+    },
+    "done": true
+  },
+  "allfiction:tritagonit": {
+    "criteria": {
+      "tritagonit": "2022-12-22 17:13:54 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/birch_boat": {
+    "criteria": {
+      "entered_water": "2022-12-22 17:11:49 -0500"
+    },
+    "done": true
+  },
+  "allfiction:awakened": {
+    "criteria": {
+      "awakened": "2022-12-22 17:16:23 -0500"
+    },
+    "done": true
+  },
+  "allfiction:devilstyle": {
+    "criteria": {
+      "devilstyle": "2022-12-22 17:15:25 -0500"
+    },
+    "done": true
+  },
+  "allfiction:contradictoryconjunction": {
+    "criteria": {
+      "contradictoryconjunction": "2022-12-22 17:18:34 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/acacia_boat": {
+    "criteria": {
+      "entered_water": "2022-12-22 17:11:49 -0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2022-12-22 17:16:56 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/boat": {
+    "criteria": {
+      "entered_water": "2022-12-22 17:11:49 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/leather_boots": {
+    "criteria": {
+      "has_leather": "2022-12-22 17:17:01 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/jungle_boat": {
+    "criteria": {
+      "entered_water": "2022-12-22 17:11:49 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/spruce_boat": {
+    "criteria": {
+      "entered_water": "2022-12-22 17:11:49 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/leather_leggings": {
+    "criteria": {
+      "has_leather": "2022-12-22 17:17:01 -0500"
+    },
+    "done": true
+  }
+}

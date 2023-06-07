@@ -1,0 +1,869 @@
+{
+  "id_map": {
+    "ENTITY": 2
+  },
+  "mod_elements": [
+    {
+      "name": "PhilipsscrewblockBulletHitsPlayer",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PhilipsscrewblockBulletHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Philipsscrew",
+      "type": "gun",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {
+        "0": 1
+      }
+    },
+    {
+      "name": "PhilipsscrewBulletHitsPlayer",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Slottedpanheadscrew",
+      "type": "gun",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {
+        "0": 2
+      }
+    },
+    {
+      "name": "AllfictionkeyOnKeyPressed",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Allfictionkey",
+      "type": "keybind",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "SlottedpanheadscrewBulletHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Philipsscrewrecipe",
+      "type": "recipe",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Slottedpanheadscrewrecipe",
+      "type": "recipe",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Steel",
+      "type": "item",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Steelore",
+      "type": "block",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Steelbeam",
+      "type": "item",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Steelbeamrecipe",
+      "type": "recipe",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Bookmaker",
+      "type": "potion",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Theloservicepresident",
+      "type": "achievement",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Rage",
+      "type": "potion",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Ninetyninethpresidentband",
+      "type": "item",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Theperfectpresident",
+      "type": "achievement",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Glasses",
+      "type": "item",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Armband",
+      "type": "recipe",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Lense",
+      "type": "item",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Lenserecipe",
+      "type": "recipe",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Glassesrecipe",
+      "type": "recipe",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "President2",
+      "type": "achievement",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Wargod",
+      "type": "achievement",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "StopAbnormalityOnKeyPressed",
+      "type": "procedure",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "StopAbnormality",
+      "type": "keybind",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Awakened",
+      "type": "achievement",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Crown",
+      "type": "item",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "AlteredGodmode",
+      "type": "achievement",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "RageOnKeyPressed",
+      "type": "procedure",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AbnormailtyOnKeyPressed",
+      "type": "procedure",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AlteredGod",
+      "type": "potion",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "AlteredGodOnKeyPressed",
+      "type": "procedure",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Abnormalitykey",
+      "type": "keybind",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "ForsakenGodMode",
+      "type": "achievement",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Abnormality2OnKeyPressed",
+      "type": "procedure",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Abnormality2",
+      "type": "keybind",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "HybridGodmode",
+      "type": "achievement",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "ForsakenGodPotionStartedapplied",
+      "type": "procedure",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ForsakenGod",
+      "type": "potion",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Abnormality3OnKeyPressed",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Abnormality3",
+      "type": "keybind",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Abnormality4OnKeyPressed",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Abnormality4",
+      "type": "keybind",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "TheEndGod",
+      "type": "achievement",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "EndPotionActiveTick",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EndGod",
+      "type": "potion",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Abnormality5OnKeyPressed",
+      "type": "procedure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Abnormality5",
+      "type": "keybind",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Parastieseeing",
+      "type": "achievement",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "TritagonistPotionStartedapplied",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Tritagonist",
+      "type": "potion",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Tritagonit",
+      "type": "achievement",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "DeuteragonistPotionStartedapplied",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Deuteragonist",
+      "type": "potion",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Euteragonist",
+      "type": "achievement",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "ProtagnistPotionStartedapplied",
+      "type": "procedure",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Protagnist",
+      "type": "potion",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Protagnst",
+      "type": "achievement",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "StoryroleOnKeyPressed",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Storyrole",
+      "type": "keybind",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "ZeroOnKeyPressed",
+      "type": "procedure",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Zero",
+      "type": "keybind",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "DevilStyle",
+      "type": "achievement",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Therefore",
+      "type": "potion",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "ContradictoryConjunction",
+      "type": "achievement",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Paradocs",
+      "type": "potion",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "ParadocsOnKeyPressed",
+      "type": "procedure",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Paradox",
+      "type": "keybind",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "advancements.protagnst.descr": "the main charatcter",
+      "item.glasses.name": "Glasses",
+      "effect.tritagonist": "Tritagonist",
+      "tipped_arrow.effect.alteredgod": "Arrow of Altered God",
+      "advancements.theloservicepresident.descr": "\"This isn\u0027t my fault\"",
+      "splash_potion.effect.alteredgod": "Splash Altered God",
+      "splash_potion.effect.deuteragonist": "Splash Deuteragonist",
+      "item.steel.name": "Steel",
+      "effect.bookmaker": "Bookmaker",
+      "splash_potion.effect.forsakengod": "Splash Forsaken God",
+      "advancements.awakened.title": "Mars mode",
+      "effect.therefore": "Therefore",
+      "effect.deuteragonist": "Deuteragonist",
+      "lingering_potion.effect.rage": "Lingering Rage",
+      "advancements.alteredgodmode.title": "first mars mode",
+      "advancements.theperfectpresident.title": "Thepresident",
+      "advancements.wargod.descr": "when pushed over the edge",
+      "advancements.contradictoryconjunction.descr": "making the impossiable possible",
+      "advancements.euteragonist.descr": "the second most importent",
+      "advancements.forsakengodmode.title": "Forsaken God Mode",
+      "advancements.contradictoryconjunction.title": "Contradictory Conjunction Style",
+      "lingering_potion.effect.alteredgod": "Lingering Altered God",
+      "key.mcreator.allfictionkey": "Minus key",
+      "effect.forsakengod": "Forsaken God",
+      "potion.effect.alteredgod": "Altered God",
+      "splash_potion.effect.tritagonist": "Splash Tritagonist",
+      "advancements.forsakengodmode.descr": "no powers just skills now",
+      "potion.effect.forsakengod": "Forsaken God",
+      "tipped_arrow.effect.rage": "Arrow of Rage",
+      "effect.protagnist": "Protagnist",
+      "key.mcreator.paradox": "Style",
+      "potion.effect.therefore": "Therefore",
+      "splash_potion.effect.protagnist": "Splash Protagnist",
+      "splash_potion.effect.rage": "Splash Rage",
+      "tipped_arrow.effect.deuteragonist": "Arrow of Deuteragonist",
+      "potion.effect.deuteragonist": "Deuteragonist",
+      "advancements.euteragonist.title": "Deuteragonist",
+      "advancements.theendgod.descr": "Thank you for reading!",
+      "splash_potion.effect.paradocs": "Splash Paradoxs",
+      "potion.effect.endgod": "End God",
+      "advancements.theperfectpresident.descr": "either the perfect or imperfect one",
+      "advancements.devilstyle.title": "Devil Style",
+      "item.lense.name": "Lense",
+      "lingering_potion.effect.bookmaker": "Lingering Bookmaker",
+      "advancements.wargod.title": "Perses mode",
+      "advancements.protagnst.title": "Protagnist ",
+      "effect.alteredgod": "Altered God",
+      "key.mcreator.stopabnormality": "Stop Abnormality",
+      "item.ninetyninethpresidentband.name": "The president\u0027s armband",
+      "tipped_arrow.effect.therefore": "Arrow of Therefore",
+      "advancements.tritagonit.descr": "the third most importent",
+      "tipped_arrow.effect.paradocs": "Arrow of Paradoxs",
+      "lingering_potion.effect.protagnist": "Lingering Protagnist",
+      "item.slottedpanheadscrew.name": "Slottedpanheadscrew",
+      "tipped_arrow.effect.protagnist": "Arrow of Protagnist",
+      "key.mcreator.abnormalitykey": "Abnormality key",
+      "potion.effect.bookmaker": "Bookmaker",
+      "advancements.parastieseeing.descr": "get parastie seeing",
+      "potion.effect.tritagonist": "Tritagonist",
+      "splash_potion.effect.bookmaker": "Splash Bookmaker",
+      "lingering_potion.effect.endgod": "Lingering End God",
+      "tipped_arrow.effect.tritagonist": "Arrow of Tritagonist",
+      "advancements.theendgod.title": "The End God",
+      "lingering_potion.effect.deuteragonist": "Lingering Deuteragonist",
+      "tipped_arrow.effect.bookmaker": "Arrow of Bookmaker",
+      "key.mcreator.zero": "Zero",
+      "lingering_potion.effect.therefore": "Lingering Therefore",
+      "effect.endgod": "End God",
+      "tipped_arrow.effect.forsakengod": "Arrow of Forsaken God",
+      "advancements.hybridgodmode.descr": "Both the strength and weaknesses",
+      "tile.steelore.name": "Steel ore",
+      "splash_potion.effect.endgod": "Splash End God",
+      "advancements.president2.descr": "the ex-general affairs manager",
+      "item.philipsscrew.name": "Philipsscrew",
+      "lingering_potion.effect.forsakengod": "Lingering Forsaken God",
+      "effect.paradocs": "Paradox",
+      "effect.rage": "War god",
+      "advancements.tritagonit.title": "Tritagonist ",
+      "item.steelbeam.name": "Steelbeam",
+      "advancements.alteredgodmode.descr": "Having control over every part of yourself",
+      "lingering_potion.effect.tritagonist": "Lingering Tritagonist",
+      "advancements.parastieseeing.title": "Greedy Sight",
+      "potion.effect.rage": "Rage",
+      "tipped_arrow.effect.endgod": "Arrow of End God",
+      "lingering_potion.effect.paradocs": "Lingering Paradoxs",
+      "key.mcreator.storyrole": "Storyrole",
+      "advancements.theloservicepresident.title": "The loser vice president",
+      "potion.effect.protagnist": "Protagnist",
+      "key.mcreator.abnormality5": "Abnormality 5",
+      "key.mcreator.abnormality4": "Abnormality4",
+      "potion.effect.paradocs": "Paradoxs",
+      "key.mcreator.abnormality3": "Abnormality 3",
+      "key.mcreator.abnormality2": "Abnormality 2",
+      "advancements.awakened.descr": "trying to become equal or above the perfect one",
+      "advancements.president2.title": "the imperfect president",
+      "splash_potion.effect.therefore": "Splash Therefore",
+      "advancements.hybridgodmode.title": "Hybrid God mode",
+      "advancements.devilstyle.descr": "not a plus or a minus, but a zero",
+      "item.crown.name": "Crown"
+    }
+  },
+  "workspaceSettings": {
+    "modid": "allfiction",
+    "modName": "all fiction",
+    "version": "1.0.0",
+    "author": "user, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "1.12.2",
+    "modElementsPackage": "net.mcreator.allfiction",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202000214217
+}
