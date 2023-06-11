@@ -5,6 +5,7 @@ import net.minecraft.world.World;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.EnumHand;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.init.MobEffects;
@@ -811,49 +812,6 @@ public class ProcedureAllfictionkeyOnKeyPressed extends ElementsAllfiction.ModEl
 					public Entity getCommandSenderEntity() {
 						return entity;
 					}
-				}, "kill @e[type=husk]");
-			}
-			if (!entity.world.isRemote && entity.world.getMinecraftServer() != null) {
-				entity.world.getMinecraftServer().getCommandManager().executeCommand(new ICommandSender() {
-					@Override
-					public String getName() {
-						return "";
-					}
-
-					@Override
-					public boolean canUseCommand(int permission, String command) {
-						return true;
-					}
-
-					@Override
-					public World getEntityWorld() {
-						return entity.world;
-					}
-
-					@Override
-					public MinecraftServer getServer() {
-						return entity.world.getMinecraftServer();
-					}
-
-					@Override
-					public boolean sendCommandFeedback() {
-						return false;
-					}
-
-					@Override
-					public BlockPos getPosition() {
-						return entity.getPosition();
-					}
-
-					@Override
-					public Vec3d getPositionVector() {
-						return new Vec3d(entity.posX, entity.posY, entity.posZ);
-					}
-
-					@Override
-					public Entity getCommandSenderEntity() {
-						return entity;
-					}
 				}, "effect @e[r=100,rn=1] minecraft:saturation 1000000");
 			}
 			if (!entity.world.isRemote && entity.world.getMinecraftServer() != null) {
@@ -898,6 +856,108 @@ public class ProcedureAllfictionkeyOnKeyPressed extends ElementsAllfiction.ModEl
 						return entity;
 					}
 				}, "effect @e[r=100,rn=1] minecraft:instant_health 1000000");
+			}
+		} else if ((((entity instanceof EntityPlayerMP) && (entity.world instanceof WorldServer))
+				? ((EntityPlayerMP) entity).getAdvancements()
+						.getProgress(((WorldServer) entity.world).getAdvancementManager()
+								.getAdvancement(new ResourceLocation("allfiction:thenonhumanwhoisjustimpartial")))
+						.isDone()
+				: false)) {
+			if (entity instanceof EntityLivingBase) {
+				((EntityLivingBase) entity).swingArm(EnumHand.MAIN_HAND);
+			}
+			if ((Math.random() <= 0.5)) {
+				if (!entity.world.isRemote && entity.world.getMinecraftServer() != null) {
+					entity.world.getMinecraftServer().getCommandManager().executeCommand(new ICommandSender() {
+						@Override
+						public String getName() {
+							return "";
+						}
+
+						@Override
+						public boolean canUseCommand(int permission, String command) {
+							return true;
+						}
+
+						@Override
+						public World getEntityWorld() {
+							return entity.world;
+						}
+
+						@Override
+						public MinecraftServer getServer() {
+							return entity.world.getMinecraftServer();
+						}
+
+						@Override
+						public boolean sendCommandFeedback() {
+							return false;
+						}
+
+						@Override
+						public BlockPos getPosition() {
+							return entity.getPosition();
+						}
+
+						@Override
+						public Vec3d getPositionVector() {
+							return new Vec3d(entity.posX, entity.posY, entity.posZ);
+						}
+
+						@Override
+						public Entity getCommandSenderEntity() {
+							return entity;
+						}
+					}, "effect @e minecraft:wither 10");
+				}
+				if (entity instanceof EntityLivingBase)
+					((EntityLivingBase) entity).clearActivePotions();
+			} else if ((Math.random() > 0.5)) {
+				if (!entity.world.isRemote && entity.world.getMinecraftServer() != null) {
+					entity.world.getMinecraftServer().getCommandManager().executeCommand(new ICommandSender() {
+						@Override
+						public String getName() {
+							return "";
+						}
+
+						@Override
+						public boolean canUseCommand(int permission, String command) {
+							return true;
+						}
+
+						@Override
+						public World getEntityWorld() {
+							return entity.world;
+						}
+
+						@Override
+						public MinecraftServer getServer() {
+							return entity.world.getMinecraftServer();
+						}
+
+						@Override
+						public boolean sendCommandFeedback() {
+							return false;
+						}
+
+						@Override
+						public BlockPos getPosition() {
+							return entity.getPosition();
+						}
+
+						@Override
+						public Vec3d getPositionVector() {
+							return new Vec3d(entity.posX, entity.posY, entity.posZ);
+						}
+
+						@Override
+						public Entity getCommandSenderEntity() {
+							return entity;
+						}
+					}, "effect @e minecraft:wither 500");
+				}
+				if (entity instanceof EntityLivingBase)
+					((EntityLivingBase) entity).clearActivePotions();
 			}
 		}
 	}
