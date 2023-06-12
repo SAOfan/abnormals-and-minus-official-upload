@@ -11,19 +11,19 @@ public class ProcedureAlibiBlocksplaceteleport extends ElementsAllfiction.ModEle
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
+		if (dependencies.get("entity") != null) {
 			System.err.println("Failed to load dependency entity for procedure AlibiBlocksplaceteleport!");
 			return;
 		}
-		if (dependencies.get("x") == null) {
+		if (dependencies.get("x") != null) {
 			System.err.println("Failed to load dependency x for procedure AlibiBlocksplaceteleport!");
 			return;
 		}
-		if (dependencies.get("y") == null) {
+		if (dependencies.get("y") != null) {
 			System.err.println("Failed to load dependency y for procedure AlibiBlocksplaceteleport!");
 			return;
 		}
-		if (dependencies.get("z") == null) {
+		if (dependencies.get("z") != null) {
 			System.err.println("Failed to load dependency z for procedure AlibiBlocksplaceteleport!");
 			return;
 		}
