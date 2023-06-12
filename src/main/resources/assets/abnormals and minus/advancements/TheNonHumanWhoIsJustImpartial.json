@@ -5,10 +5,10 @@
         "item": "minecraft:air"
       },
       "title": {
-        "text": "The Non-Human Who Is Just Impartial"
+        "translate": "advancements.TheNonHumanWhoIsJustImpartial.title"
       },
       "description": {
-        "text": "Become the Anshin'in who predates the universe"
+        "translate": "advancements.TheNonHumanWhoIsJustImpartial.descr"
       },
       "frame": "goal",
       "show_toast": true,
