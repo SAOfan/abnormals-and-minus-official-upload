@@ -19,7 +19,12 @@ public class ProcedureTritagonistPotionStartedapplied extends ElementsAllfiction
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((((entity instanceof EntityLivingBase) ? ((EntityLivingBase) entity).getHealth() : -1) <= 0)) {
+		if ((((entity instanceof EntityLivingBase) ? ((EntityLivingBase) entity).getHealth() : -1) > 5)) {
+			if (entity instanceof EntityLivingBase)
+				((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.REGENERATION, (int) 1000000, (int) 1));
+			if (entity instanceof EntityLivingBase)
+				((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, (int) 1000000, (int) 1));
+		} else if ((((entity instanceof EntityLivingBase) ? ((EntityLivingBase) entity).getHealth() : -1) <= 5)) {
 			if (entity instanceof EntityLivingBase)
 				((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.STRENGTH, (int) 1000000, (int) 1));
 			if (entity instanceof EntityLivingBase)

@@ -1,10 +1,13 @@
 package net.mcreator.allfiction.procedure;
 
+import net.minecraft.world.WorldServer;
 import net.minecraft.world.World;
 import net.minecraft.world.GameType;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.Entity;
@@ -23,7 +26,27 @@ public class ProcedureStopAbnormalityOnKeyPressed extends ElementsAllfiction.Mod
 			System.err.println("Failed to load dependency entity for procedure StopAbnormalityOnKeyPressed!");
 			return;
 		}
+		if (dependencies.get("x") == null) {
+			System.err.println("Failed to load dependency x for procedure StopAbnormalityOnKeyPressed!");
+			return;
+		}
+		if (dependencies.get("y") == null) {
+			System.err.println("Failed to load dependency y for procedure StopAbnormalityOnKeyPressed!");
+			return;
+		}
+		if (dependencies.get("z") == null) {
+			System.err.println("Failed to load dependency z for procedure StopAbnormalityOnKeyPressed!");
+			return;
+		}
+		if (dependencies.get("world") == null) {
+			System.err.println("Failed to load dependency world for procedure StopAbnormalityOnKeyPressed!");
+			return;
+		}
 		Entity entity = (Entity) dependencies.get("entity");
+		int x = (int) dependencies.get("x");
+		int y = (int) dependencies.get("y");
+		int z = (int) dependencies.get("z");
+		World world = (World) dependencies.get("world");
 		if (entity instanceof EntityPlayer)
 			((EntityPlayer) entity).setGameType(GameType.SURVIVAL);
 		if (entity instanceof EntityLivingBase)
@@ -70,6 +93,14 @@ public class ProcedureStopAbnormalityOnKeyPressed extends ElementsAllfiction.Mod
 					return entity;
 				}
 			}, "effect SAO_fan minecaft:unluck 1000000");
+		}
+		if ((((entity instanceof EntityPlayerMP) && (entity.world instanceof WorldServer))
+				? ((EntityPlayerMP) entity).getAdvancements()
+						.getProgress(((WorldServer) entity.world).getAdvancementManager()
+								.getAdvancement(new ResourceLocation("allfiction:thenonhumanwhoisjustimpartial")))
+						.isDone()
+				: false)) {
+			world.setBlockToAir(new BlockPos((int) x, (int) (y - 1), (int) z));
 		}
 	}
 }
