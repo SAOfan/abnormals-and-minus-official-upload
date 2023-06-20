@@ -15,10 +15,16 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.common.MinecraftForge;
 
+import net.minecraft.world.World;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.client.settings.KeyBinding;
+import net.minecraft.client.Minecraft;
 
+import net.mcreator.allfiction.procedure.ProcedureSkillslistOnKeyPressed;
 import net.mcreator.allfiction.ElementsAllfiction;
+import net.mcreator.allfiction.Allfiction;
 
 @ElementsAllfiction.ModElement.Tag
 public class KeyBindingSkillslist extends ElementsAllfiction.ModElement {
@@ -43,12 +49,19 @@ public class KeyBindingSkillslist extends ElementsAllfiction.ModElement {
 	@SubscribeEvent
 	@SideOnly(Side.CLIENT)
 	public void onKeyInput(InputEvent.KeyInputEvent event) {
+		if (Minecraft.getMinecraft().currentScreen == null) {
+			if (org.lwjgl.input.Keyboard.isKeyDown(keys.getKeyCode())) {
+				Allfiction.PACKET_HANDLER.sendToServer(new KeyBindingPressedMessage());
+				pressAction(Minecraft.getMinecraft().player);
+			}
+		}
 	}
 	public static class KeyBindingPressedMessageHandler implements IMessageHandler<KeyBindingPressedMessage, IMessage> {
 		@Override
 		public IMessage onMessage(KeyBindingPressedMessage message, MessageContext context) {
 			EntityPlayerMP entity = context.getServerHandler().player;
 			entity.getServerWorld().addScheduledTask(() -> {
+				pressAction(entity);
 			});
 			return null;
 		}
@@ -61,6 +74,24 @@ public class KeyBindingSkillslist extends ElementsAllfiction.ModElement {
 
 		@Override
 		public void fromBytes(io.netty.buffer.ByteBuf buf) {
+		}
+	}
+	private static void pressAction(EntityPlayer entity) {
+		World world = entity.world;
+		int x = (int) entity.posX;
+		int y = (int) entity.posY;
+		int z = (int) entity.posZ;
+		// security measure to prevent arbitrary chunk generation
+		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
+			return;
+		{
+			java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+			$_dependencies.put("entity", entity);
+			$_dependencies.put("x", x);
+			$_dependencies.put("y", y);
+			$_dependencies.put("z", z);
+			$_dependencies.put("world", world);
+			ProcedureSkillslistOnKeyPressed.executeProcedure($_dependencies);
 		}
 	}
 }
