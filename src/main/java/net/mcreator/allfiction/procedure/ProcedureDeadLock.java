@@ -73,3 +73,4 @@ public class ProcedureDeadLock extends ElementsAllfiction.ModElement {
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 }
+//the only way to die is something taht dose over 20 damage in 1 go but it can be over come with armour sadly(they can live in the void)
