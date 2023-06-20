@@ -7,6 +7,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.init.Blocks;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.EntityLivingBase;
@@ -47,6 +48,16 @@ public class ProcedureStopAbnormalityOnKeyPressed extends ElementsAllfiction.Mod
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
+		if ((((entity instanceof EntityPlayerMP) && (entity.world instanceof WorldServer))
+				? ((EntityPlayerMP) entity).getAdvancements()
+						.getProgress(((WorldServer) entity.world).getAdvancementManager()
+								.getAdvancement(new ResourceLocation("allfiction:thenonhumanwhoisjustimpartial")))
+						.isDone()
+				: false)) {
+			if (true) {
+				world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), Blocks.GRASS.getDefaultState(), 3);
+			}
+		}
 		if (entity instanceof EntityPlayer)
 			((EntityPlayer) entity).setGameType(GameType.SURVIVAL);
 		if (entity instanceof EntityLivingBase)
@@ -93,14 +104,6 @@ public class ProcedureStopAbnormalityOnKeyPressed extends ElementsAllfiction.Mod
 					return entity;
 				}
 			}, "effect SAO_fan minecaft:unluck 1000000");
-		}
-		if ((((entity instanceof EntityPlayerMP) && (entity.world instanceof WorldServer))
-				? ((EntityPlayerMP) entity).getAdvancements()
-						.getProgress(((WorldServer) entity.world).getAdvancementManager()
-								.getAdvancement(new ResourceLocation("allfiction:thenonhumanwhoisjustimpartial")))
-						.isDone()
-				: false)) {
-			world.setBlockToAir(new BlockPos((int) x, (int) (y - 1), (int) z));
 		}
 	}
 }

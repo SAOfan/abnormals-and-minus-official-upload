@@ -34,6 +34,17 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.block.Block;
 
+import net.mcreator.allfiction.gui.GuiSkilllist;
+import net.mcreator.allfiction.gui.GuiLifeZeroDesc;
+import net.mcreator.allfiction.gui.GuiGiveUpDownDesc;
+import net.mcreator.allfiction.gui.GuiFiveFocusDesc;
+import net.mcreator.allfiction.gui.GuiDeadLockdesc;
+import net.mcreator.allfiction.gui.GuiAlibiBlockdesc;
+import net.mcreator.allfiction.gui.GuiAlibiBlockPlayer;
+import net.mcreator.allfiction.gui.GuiAlibiBlockPlace;
+import net.mcreator.allfiction.gui.GuiAlibiBlockDimension;
+import net.mcreator.allfiction.gui.GuiAlibiBlock;
+
 import java.util.function.Supplier;
 import java.util.Random;
 import java.util.Map;
@@ -54,6 +65,8 @@ public class ElementsAllfiction implements IFuelHandler, IWorldGenerator {
 	public final List<Supplier<Potion>> potions = new ArrayList<>();
 	public static Map<ResourceLocation, net.minecraft.util.SoundEvent> sounds = new HashMap<>();
 	public ElementsAllfiction() {
+		sounds.put(new ResourceLocation("allfiction", "lifezerosound"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("allfiction", "lifezerosound")));
 	}
 
 	public void preInit(FMLPreInitializationEvent event) {
@@ -122,11 +135,51 @@ public class ElementsAllfiction implements IFuelHandler, IWorldGenerator {
 	public static class GuiHandler implements IGuiHandler {
 		@Override
 		public Object getServerGuiElement(int id, EntityPlayer player, World world, int x, int y, int z) {
+			if (id == GuiAlibiBlock.GUIID)
+				return new GuiAlibiBlock.GuiContainerMod(world, x, y, z, player);
+			if (id == GuiAlibiBlockPlace.GUIID)
+				return new GuiAlibiBlockPlace.GuiContainerMod(world, x, y, z, player);
+			if (id == GuiAlibiBlockPlayer.GUIID)
+				return new GuiAlibiBlockPlayer.GuiContainerMod(world, x, y, z, player);
+			if (id == GuiAlibiBlockDimension.GUIID)
+				return new GuiAlibiBlockDimension.GuiContainerMod(world, x, y, z, player);
+			if (id == GuiAlibiBlockdesc.GUIID)
+				return new GuiAlibiBlockdesc.GuiContainerMod(world, x, y, z, player);
+			if (id == GuiSkilllist.GUIID)
+				return new GuiSkilllist.GuiContainerMod(world, x, y, z, player);
+			if (id == GuiDeadLockdesc.GUIID)
+				return new GuiDeadLockdesc.GuiContainerMod(world, x, y, z, player);
+			if (id == GuiLifeZeroDesc.GUIID)
+				return new GuiLifeZeroDesc.GuiContainerMod(world, x, y, z, player);
+			if (id == GuiGiveUpDownDesc.GUIID)
+				return new GuiGiveUpDownDesc.GuiContainerMod(world, x, y, z, player);
+			if (id == GuiFiveFocusDesc.GUIID)
+				return new GuiFiveFocusDesc.GuiContainerMod(world, x, y, z, player);
 			return null;
 		}
 
 		@Override
 		public Object getClientGuiElement(int id, EntityPlayer player, World world, int x, int y, int z) {
+			if (id == GuiAlibiBlock.GUIID)
+				return new GuiAlibiBlock.GuiWindow(world, x, y, z, player);
+			if (id == GuiAlibiBlockPlace.GUIID)
+				return new GuiAlibiBlockPlace.GuiWindow(world, x, y, z, player);
+			if (id == GuiAlibiBlockPlayer.GUIID)
+				return new GuiAlibiBlockPlayer.GuiWindow(world, x, y, z, player);
+			if (id == GuiAlibiBlockDimension.GUIID)
+				return new GuiAlibiBlockDimension.GuiWindow(world, x, y, z, player);
+			if (id == GuiAlibiBlockdesc.GUIID)
+				return new GuiAlibiBlockdesc.GuiWindow(world, x, y, z, player);
+			if (id == GuiSkilllist.GUIID)
+				return new GuiSkilllist.GuiWindow(world, x, y, z, player);
+			if (id == GuiDeadLockdesc.GUIID)
+				return new GuiDeadLockdesc.GuiWindow(world, x, y, z, player);
+			if (id == GuiLifeZeroDesc.GUIID)
+				return new GuiLifeZeroDesc.GuiWindow(world, x, y, z, player);
+			if (id == GuiGiveUpDownDesc.GUIID)
+				return new GuiGiveUpDownDesc.GuiWindow(world, x, y, z, player);
+			if (id == GuiFiveFocusDesc.GUIID)
+				return new GuiFiveFocusDesc.GuiWindow(world, x, y, z, player);
 			return null;
 		}
 	}

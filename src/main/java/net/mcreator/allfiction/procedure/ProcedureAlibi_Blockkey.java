@@ -1,6 +1,9 @@
 package net.mcreator.allfiction.procedure;
 
+import net.minecraft.world.WorldServer;
 import net.minecraft.world.World;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.Entity;
 
@@ -40,7 +43,14 @@ public class ProcedureAlibi_Blockkey extends ElementsAllfiction.ModElement {
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
-		if (entity instanceof EntityPlayer)
-			((EntityPlayer) entity).openGui(Allfiction.instance, GuiAlibiBlock.GUIID, world, x, y, z);
+		if ((((entity instanceof EntityPlayerMP) && (entity.world instanceof WorldServer))
+				? ((EntityPlayerMP) entity).getAdvancements()
+						.getProgress(((WorldServer) entity.world).getAdvancementManager()
+								.getAdvancement(new ResourceLocation("allfiction:thenonhumanwhoisjustimpartial")))
+						.isDone()
+				: false)) {
+			if (entity instanceof EntityPlayer)
+				((EntityPlayer) entity).openGui(Allfiction.instance, GuiAlibiBlock.GUIID, world, x, y, z);
+		}
 	}
 }

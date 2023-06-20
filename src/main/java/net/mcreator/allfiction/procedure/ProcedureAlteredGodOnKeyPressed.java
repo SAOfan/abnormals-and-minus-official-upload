@@ -55,8 +55,13 @@ public class ProcedureAlteredGodOnKeyPressed extends ElementsAllfiction.ModEleme
 								.getAdvancement(new ResourceLocation("allfiction:parastieseeing")))
 						.isDone()
 				: false)) {
-			if (entity instanceof EntityPlayer)
-				((EntityPlayer) entity).setGameType(GameType.SPECTATOR);
+			if (((entity.getEntityData().getDouble("Parastie seeing")) <= 80)) {
+				if (entity instanceof EntityPlayer)
+					((EntityPlayer) entity).setGameType(GameType.SPECTATOR);
+			} else if (((entity.getEntityData().getDouble("Parastie seeing")) > 80)) {
+				if (entity instanceof EntityPlayer)
+					((EntityPlayer) entity).setGameType(GameType.SURVIVAL);
+			}
 		}
 	}
 }
