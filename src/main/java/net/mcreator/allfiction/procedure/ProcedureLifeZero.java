@@ -93,7 +93,7 @@ public class ProcedureLifeZero extends ElementsAllfiction.ModElement {
 					public Entity getCommandSenderEntity() {
 						return entity;
 					}
-				}, "advancement revoke @p from allfiction:theloservicepresident");
+				}, "advancement revoke @p[r=30, rm =1] from allfiction:theloservicepresident");
 			}
 			if (!entity.world.isRemote && entity.world.getMinecraftServer() != null) {
 				entity.world.getMinecraftServer().getCommandManager().executeCommand(new ICommandSender() {
@@ -136,7 +136,7 @@ public class ProcedureLifeZero extends ElementsAllfiction.ModElement {
 					public Entity getCommandSenderEntity() {
 						return entity;
 					}
-				}, "advancement revoke @p until allfiction:forsakengodmode");
+				}, "advancement revoke @p[r=30, rm =1] until allfiction:forsakengodmode");
 			}
 			if (!entity.world.isRemote && entity.world.getMinecraftServer() != null) {
 				entity.world.getMinecraftServer().getCommandManager().executeCommand(new ICommandSender() {
@@ -179,7 +179,7 @@ public class ProcedureLifeZero extends ElementsAllfiction.ModElement {
 					public Entity getCommandSenderEntity() {
 						return entity;
 					}
-				}, "advancement revoke @p through allfiction:parastieseeing");
+				}, "advancement revoke @p[r=30, rm =1] through allfiction:parastieseeing");
 			}
 			if (!entity.world.isRemote && entity.world.getMinecraftServer() != null) {
 				entity.world.getMinecraftServer().getCommandManager().executeCommand(new ICommandSender() {
@@ -222,7 +222,7 @@ public class ProcedureLifeZero extends ElementsAllfiction.ModElement {
 					public Entity getCommandSenderEntity() {
 						return entity;
 					}
-				}, "advancement revoke @p from allfiction:hybridgodmode");
+				}, "advancement revoke @p[r=30, rm =1] from allfiction:hybridgodmode");
 			}
 			world.playSound((EntityPlayer) null, x, y, z, (net.minecraft.util.SoundEvent) net.minecraft.util.SoundEvent.REGISTRY
 					.getObject(new ResourceLocation("allfiction:lifezerosound")), SoundCategory.NEUTRAL, (float) 1, (float) 1);
