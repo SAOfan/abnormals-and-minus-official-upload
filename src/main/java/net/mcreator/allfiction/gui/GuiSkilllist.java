@@ -20,9 +20,13 @@ import net.minecraft.inventory.Container;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.client.gui.inventory.GuiContainer;
-import net.minecraft.client.gui.GuiTextField;
 import net.minecraft.client.gui.GuiButton;
 
+import net.mcreator.allfiction.procedure.ProcedureSkillsGiveUpDown;
+import net.mcreator.allfiction.procedure.ProcedureSkillLifeZero;
+import net.mcreator.allfiction.procedure.ProcedureSkillFivefocus;
+import net.mcreator.allfiction.procedure.ProcedureSkillDeadlock;
+import net.mcreator.allfiction.procedure.ProcedureSkillAlibiBlock;
 import net.mcreator.allfiction.ElementsAllfiction;
 import net.mcreator.allfiction.Allfiction;
 
@@ -33,11 +37,11 @@ import java.util.HashMap;
 import java.io.IOException;
 
 @ElementsAllfiction.ModElement.Tag
-public class GuiAlibiBlockPlayer extends ElementsAllfiction.ModElement {
-	public static int GUIID = 3;
+public class GuiSkilllist extends ElementsAllfiction.ModElement {
+	public static int GUIID = 6;
 	public static HashMap guistate = new HashMap();
-	public GuiAlibiBlockPlayer(ElementsAllfiction instance) {
-		super(instance, 58);
+	public GuiSkilllist(ElementsAllfiction instance) {
+		super(instance, 70);
 	}
 
 	@Override
@@ -89,7 +93,6 @@ public class GuiAlibiBlockPlayer extends ElementsAllfiction.ModElement {
 		private World world;
 		private int x, y, z;
 		private EntityPlayer entity;
-		GuiTextField Playername;
 		public GuiWindow(World world, int x, int y, int z, EntityPlayer entity) {
 			super(new GuiContainerMod(world, x, y, z, entity));
 			this.world = world;
@@ -97,10 +100,10 @@ public class GuiAlibiBlockPlayer extends ElementsAllfiction.ModElement {
 			this.y = y;
 			this.z = z;
 			this.entity = entity;
-			this.xSize = 176;
-			this.ySize = 166;
+			this.xSize = 188;
+			this.ySize = 192;
 		}
-		private static final ResourceLocation texture = new ResourceLocation("allfiction:textures/alibiblockplayer.png");
+		private static final ResourceLocation texture = new ResourceLocation("allfiction:textures/skilllist.png");
 		@Override
 		public void drawScreen(int mouseX, int mouseY, float partialTicks) {
 			this.drawDefaultBackground();
@@ -121,27 +124,21 @@ public class GuiAlibiBlockPlayer extends ElementsAllfiction.ModElement {
 		@Override
 		public void updateScreen() {
 			super.updateScreen();
-			Playername.updateCursorCounter();
 		}
 
 		@Override
 		protected void mouseClicked(int mouseX, int mouseY, int mouseButton) throws IOException {
-			Playername.mouseClicked(mouseX - guiLeft, mouseY - guiTop, mouseButton);
 			super.mouseClicked(mouseX, mouseY, mouseButton);
 		}
 
 		@Override
 		protected void keyTyped(char typedChar, int keyCode) throws IOException {
-			Playername.textboxKeyTyped(typedChar, keyCode);
-			if (Playername.isFocused())
-				return;
 			super.keyTyped(typedChar, keyCode);
 		}
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(int par1, int par2) {
-			Playername.drawTextBox();
-			this.fontRenderer.drawString("Where to/who to:", 25, 110, -16777216);
+			this.fontRenderer.drawString("Skills page 1", 58, 6, -16777216);
 		}
 
 		@Override
@@ -153,15 +150,15 @@ public class GuiAlibiBlockPlayer extends ElementsAllfiction.ModElement {
 		@Override
 		public void initGui() {
 			super.initGui();
-			this.guiLeft = (this.width - 176) / 2;
-			this.guiTop = (this.height - 166) / 2;
+			this.guiLeft = (this.width - 188) / 2;
+			this.guiTop = (this.height - 192) / 2;
 			Keyboard.enableRepeatEvents(true);
 			this.buttonList.clear();
-			this.buttonList.add(new GuiButton(0, this.guiLeft + 52, this.guiTop + 20, 80, 20, "Teleport"));
-			Playername = new GuiTextField(0, this.fontRenderer, 25, 119, 120, 20);
-			guistate.put("text:Playername", Playername);
-			Playername.setMaxStringLength(32767);
-			Playername.setText("Player");
+			this.buttonList.add(new GuiButton(0, this.guiLeft + 22, this.guiTop + 24, 110, 20, "Alibi Block"));
+			this.buttonList.add(new GuiButton(1, this.guiLeft + 22, this.guiTop + 51, 90, 20, "Dead Lock"));
+			this.buttonList.add(new GuiButton(2, this.guiLeft + 22, this.guiTop + 78, 100, 20, "Life Zero"));
+			this.buttonList.add(new GuiButton(3, this.guiLeft + 22, this.guiTop + 105, 100, 20, "Five Focus"));
+			this.buttonList.add(new GuiButton(4, this.guiLeft + 22, this.guiTop + 132, 120, 20, "Give Up-Down"));
 		}
 
 		@Override
@@ -276,6 +273,61 @@ public class GuiAlibiBlockPlayer extends ElementsAllfiction.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
+		if (buttonID == 0) {
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				ProcedureSkillAlibiBlock.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 1) {
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				ProcedureSkillDeadlock.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 2) {
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				ProcedureSkillLifeZero.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 3) {
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				ProcedureSkillFivefocus.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 4) {
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				ProcedureSkillsGiveUpDown.executeProcedure($_dependencies);
+			}
+		}
 	}
 
 	private static void handleSlotAction(EntityPlayer entity, int slotID, int changeType, int meta, int x, int y, int z) {

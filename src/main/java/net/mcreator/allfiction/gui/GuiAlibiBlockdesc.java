@@ -20,9 +20,9 @@ import net.minecraft.inventory.Container;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.client.gui.inventory.GuiContainer;
-import net.minecraft.client.gui.GuiTextField;
 import net.minecraft.client.gui.GuiButton;
 
+import net.mcreator.allfiction.procedure.ProcedureBack;
 import net.mcreator.allfiction.ElementsAllfiction;
 import net.mcreator.allfiction.Allfiction;
 
@@ -33,11 +33,11 @@ import java.util.HashMap;
 import java.io.IOException;
 
 @ElementsAllfiction.ModElement.Tag
-public class GuiAlibiBlockPlayer extends ElementsAllfiction.ModElement {
-	public static int GUIID = 3;
+public class GuiAlibiBlockdesc extends ElementsAllfiction.ModElement {
+	public static int GUIID = 5;
 	public static HashMap guistate = new HashMap();
-	public GuiAlibiBlockPlayer(ElementsAllfiction instance) {
-		super(instance, 58);
+	public GuiAlibiBlockdesc(ElementsAllfiction instance) {
+		super(instance, 70);
 	}
 
 	@Override
@@ -89,7 +89,6 @@ public class GuiAlibiBlockPlayer extends ElementsAllfiction.ModElement {
 		private World world;
 		private int x, y, z;
 		private EntityPlayer entity;
-		GuiTextField Playername;
 		public GuiWindow(World world, int x, int y, int z, EntityPlayer entity) {
 			super(new GuiContainerMod(world, x, y, z, entity));
 			this.world = world;
@@ -100,7 +99,7 @@ public class GuiAlibiBlockPlayer extends ElementsAllfiction.ModElement {
 			this.xSize = 176;
 			this.ySize = 166;
 		}
-		private static final ResourceLocation texture = new ResourceLocation("allfiction:textures/alibiblockplayer.png");
+		private static final ResourceLocation texture = new ResourceLocation("allfiction:textures/alibiblockdesc.png");
 		@Override
 		public void drawScreen(int mouseX, int mouseY, float partialTicks) {
 			this.drawDefaultBackground();
@@ -121,27 +120,23 @@ public class GuiAlibiBlockPlayer extends ElementsAllfiction.ModElement {
 		@Override
 		public void updateScreen() {
 			super.updateScreen();
-			Playername.updateCursorCounter();
 		}
 
 		@Override
 		protected void mouseClicked(int mouseX, int mouseY, int mouseButton) throws IOException {
-			Playername.mouseClicked(mouseX - guiLeft, mouseY - guiTop, mouseButton);
 			super.mouseClicked(mouseX, mouseY, mouseButton);
 		}
 
 		@Override
 		protected void keyTyped(char typedChar, int keyCode) throws IOException {
-			Playername.textboxKeyTyped(typedChar, keyCode);
-			if (Playername.isFocused())
-				return;
 			super.keyTyped(typedChar, keyCode);
 		}
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(int par1, int par2) {
-			Playername.drawTextBox();
-			this.fontRenderer.drawString("Where to/who to:", 25, 110, -16777216);
+			this.fontRenderer.drawString("Description", 52, 11, -16777216);
+			this.fontRenderer.drawString("Gives the player the ability ", 7, 38, -16777216);
+			this.fontRenderer.drawString("to appear anywhere they want", 7, 47, -16777216);
 		}
 
 		@Override
@@ -157,11 +152,7 @@ public class GuiAlibiBlockPlayer extends ElementsAllfiction.ModElement {
 			this.guiTop = (this.height - 166) / 2;
 			Keyboard.enableRepeatEvents(true);
 			this.buttonList.clear();
-			this.buttonList.add(new GuiButton(0, this.guiLeft + 52, this.guiTop + 20, 80, 20, "Teleport"));
-			Playername = new GuiTextField(0, this.fontRenderer, 25, 119, 120, 20);
-			guistate.put("text:Playername", Playername);
-			Playername.setMaxStringLength(32767);
-			Playername.setText("Player");
+			this.buttonList.add(new GuiButton(0, this.guiLeft + 106, this.guiTop + 137, 40, 20, "Back"));
 		}
 
 		@Override
@@ -276,6 +267,17 @@ public class GuiAlibiBlockPlayer extends ElementsAllfiction.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
+		if (buttonID == 0) {
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				ProcedureBack.executeProcedure($_dependencies);
+			}
+		}
 	}
 
 	private static void handleSlotAction(EntityPlayer entity, int slotID, int changeType, int meta, int x, int y, int z) {

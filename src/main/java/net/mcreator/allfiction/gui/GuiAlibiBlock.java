@@ -22,7 +22,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.gui.GuiButton;
 
-import net.mcreator.allfiction.procedure.ProcedureAlibiBlockPlayerswap;
 import net.mcreator.allfiction.procedure.ProcedureAlibiBlockPlaceswap;
 import net.mcreator.allfiction.procedure.ProcedureAlibiBlockDimensionswap;
 import net.mcreator.allfiction.ElementsAllfiction;
@@ -152,9 +151,8 @@ public class GuiAlibiBlock extends ElementsAllfiction.ModElement {
 			this.guiTop = (this.height - 166) / 2;
 			Keyboard.enableRepeatEvents(true);
 			this.buttonList.clear();
-			this.buttonList.add(new GuiButton(0, this.guiLeft + 7, this.guiTop + 83, 70, 20, "Players"));
-			this.buttonList.add(new GuiButton(1, this.guiLeft + 7, this.guiTop + 56, 50, 20, "Place"));
-			this.buttonList.add(new GuiButton(2, this.guiLeft + 7, this.guiTop + 110, 90, 20, "Dimension"));
+			this.buttonList.add(new GuiButton(0, this.guiLeft + 7, this.guiTop + 74, 50, 20, "Place"));
+			this.buttonList.add(new GuiButton(1, this.guiLeft + 7, this.guiTop + 110, 90, 20, "Dimension"));
 		}
 
 		@Override
@@ -277,21 +275,10 @@ public class GuiAlibiBlock extends ElementsAllfiction.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ProcedureAlibiBlockPlayerswap.executeProcedure($_dependencies);
-			}
-		}
-		if (buttonID == 1) {
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
 				ProcedureAlibiBlockPlaceswap.executeProcedure($_dependencies);
 			}
 		}
-		if (buttonID == 2) {
+		if (buttonID == 1) {
 			{
 				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
 				$_dependencies.put("entity", entity);
